@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return 'olá,seja bem vindo!';
+// });
+
+Route::get('/', 'PrincipalController@principal');
+
+Route::get('/sobre-mim', 'SobreNosController@sobreNos');
+Route::get('/contato', 'ContatoController@contato');
+
+//subsituo a função de callback por uma string  
